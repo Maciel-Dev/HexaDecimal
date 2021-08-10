@@ -11,9 +11,12 @@ def f_base10tobase16(num10):
     denominador = 16
     
     calc = num10 // denominador
-    resto = calc % denominador
+    resto = num10 % denominador
+    
 
-    while calc > 0:
+    while calc != 0:
+        calc = num10 // denominador
+        resto = num10 % denominador
 
         if resto >= 0 and resto <= 9:
             string += f"{resto}"
@@ -23,15 +26,12 @@ def f_base10tobase16(num10):
             string += f"{listaLetras[resto-10]}"
             print(listaLetras[resto-10])
 
+        
+
+    
         num10 = calc
-        calc = num10 // denominador
-        resto = calc % denominador
-       
         print(string)
-
-
-
-
+        
 
 
 def main():
