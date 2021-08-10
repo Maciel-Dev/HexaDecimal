@@ -5,7 +5,6 @@
 def hexaConverter(num10):
     denominador = int(0)
     calc = int(0)
-    conversor = int(0)
     string = ""
     novaString = ""
 
